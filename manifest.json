@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Unload Tab",
+  "version": "1.0.0",
+  "description": "Unload the current tab with a keyboard shortcut and jump back to the tab you used last.",
+  "homepage_url": "https://github.com/semihsmg/quick-unload-tab",
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "quick-unload-tab@semihsmg",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "commands": {
+    "unload-current-tab": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+U"
+      },
+      "description": "Unload current tab"
+    }
+  }
+}
