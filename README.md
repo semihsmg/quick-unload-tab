@@ -8,6 +8,8 @@ Press **Cmd+Shift+U** (macOS) or **Ctrl+Shift+U** (Windows/Linux).
 
 Unloaded tabs stay in the tab bar and reload when you click them. This matches Firefox's built-in "Unload Tab" context menu item.
 
+The add-on switches to the most recently used tab that's still loaded, so an unloaded tab never gets woken up. If every other tab is already unloaded, it opens a new tab.
+
 To change the shortcut, go to `about:addons` → gear icon → **Manage Extension Shortcuts**.
 
 ## Development
