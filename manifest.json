@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Quick Unload Tab",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Unload the current tab with a keyboard shortcut and switch to the next loaded tab, like Firefox's built-in Unload Tab.",
   "homepage_url": "https://github.com/semihsmg/quick-unload-tab",
   "icons": {
