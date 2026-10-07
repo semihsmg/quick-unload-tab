@@ -3,10 +3,10 @@
     "firefox": ["tabs"]
   },
   "summary": {
-    "en-US": "Unload the current tab with a keyboard shortcut (Cmd+Shift+U / Ctrl+Shift+U) and jump straight back to the tab you used last."
+    "en-US": "Unload the current tab with a keyboard shortcut (Cmd+Shift+U / Ctrl+Shift+U) and switch to the next loaded tab."
   },
   "description": {
-    "en-US": "Press Cmd+Shift+U (macOS) or Ctrl+Shift+U (Windows/Linux) to unload the tab you're on. Firefox frees its memory and CPU, and you're taken back to the tab you were using before it.\n\nThe unloaded tab stays in the tab bar and reloads when you click it again. It's the same as the built-in \"Unload Tab\" item in the tab context menu, just on a key.\n\nChange the shortcut: about:addons → gear icon → Manage Extension Shortcuts.\n\nNo permissions, no data collection. Source code: https://github.com/semihsmg/quick-unload-tab"
+    "en-US": "Press Cmd+Shift+U (macOS) or Ctrl+Shift+U (Windows/Linux) to unload the tab you're on. Firefox frees its memory and CPU, and you're taken to the next loaded tab, skipping ones that are already unloaded.\n\nThe unloaded tab stays in the tab bar and reloads when you click it again. It's the same as the built-in \"Unload Tab\" item in the tab context menu, just on a key.\n\nChange the shortcut: about:addons → gear icon → Manage Extension Shortcuts.\n\nNo permissions, no data collection. Source code: https://github.com/semihsmg/quick-unload-tab"
   },
   "homepage": {
     "en-US": "https://github.com/semihsmg/quick-unload-tab"

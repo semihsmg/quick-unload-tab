@@ -5,22 +5,24 @@ browser.commands.onCommand.addListener(async (command) => {
   if (!activeTab) return;
 
   // Firefox can't unload the tab you're looking at, so switch away first.
-  // Like the built-in "Unload Tab", skip tabs that are already unloaded and
-  // open a new tab if none are left.
+  // Like the built-in "Unload Tab", go to the nearest loaded tab on the right,
+  // then on the left, and open a new tab if none are left.
   const loadedTabs = await browser.tabs.query({
     currentWindow: true,
     active: false,
     hidden: false,
     discarded: false,
   });
+  loadedTabs.sort((a, b) => a.index - b.index);
 
-  if (loadedTabs.length === 0) {
-    await browser.tabs.create({});
+  const nextTab =
+    loadedTabs.find((tab) => tab.index > activeTab.index) ??
+    loadedTabs.findLast((tab) => tab.index < activeTab.index);
+
+  if (nextTab) {
+    await browser.tabs.update(nextTab.id, { active: true });
   } else {
-    const lastUsedTab = loadedTabs.reduce((mostRecent, tab) =>
-      tab.lastAccessed > mostRecent.lastAccessed ? tab : mostRecent
-    );
-    await browser.tabs.update(lastUsedTab.id, { active: true });
+    await browser.tabs.create({});
   }
 
   await browser.tabs.discard(activeTab.id);
