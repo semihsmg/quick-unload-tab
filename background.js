@@ -26,6 +26,11 @@ browser.menus.onClicked.addListener(async (info, tab) => {
 
   const groupTabs = await browser.tabs.query({ groupId: tab.groupId });
   await unloadTabs(groupTabs);
+
+  const { collapseGroupAfterUnload } = await browser.storage.sync.get(DEFAULT_SETTINGS);
+  if (collapseGroupAfterUnload) {
+    await browser.tabGroups.update(tab.groupId, { collapsed: true });
+  }
 });
 
 browser.commands.onCommand.addListener(async (command) => {

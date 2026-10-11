@@ -17,9 +17,12 @@
       }
     }
   },
-  "permissions": ["menus"],
+  "permissions": ["menus", "storage", "tabGroups"],
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["settings.js", "background.js"]
+  },
+  "options_ui": {
+    "page": "options.html"
   },
   "commands": {
     "unload-current-tab": {

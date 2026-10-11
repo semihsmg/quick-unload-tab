@@ -14,7 +14,9 @@ To change the shortcut, go to `about:addons` → gear icon → **Manage Extensio
 
 ### Tab groups
 
-Right-click any tab in a tab group → **Unload Tabs in Group** to unload the whole group. If you're on a tab in that group, it switches to the nearest loaded tab outside the group first.
+Right-click any tab in a tab group → **Unload Tabs in Group** to unload the whole group and collapse it. If you're on a tab in that group, it switches to the nearest loaded tab outside the group first.
+
+To keep the group expanded, turn off **Collapse the group** in `about:addons` → Quick Unload Tab → **Preferences** (**Options** on Windows).
 
 Firefox doesn't let add-ons add items to the group label's own menu ([bug 1946602](https://bugzilla.mozilla.org/show_bug.cgi?id=1946602)), so the item lives in the tab menu.
 
