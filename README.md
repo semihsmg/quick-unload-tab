@@ -12,6 +12,12 @@ Like the built-in action, it switches to the nearest loaded tab on the right (or
 
 To change the shortcut, go to `about:addons` → gear icon → **Manage Extension Shortcuts**.
 
+### Tab groups
+
+Right-click any tab in a tab group → **Unload Tabs in Group** to unload the whole group. If you're on a tab in that group, it switches to the nearest loaded tab outside the group first.
+
+Firefox doesn't let add-ons add items to the group label's own menu ([bug 1946602](https://bugzilla.mozilla.org/show_bug.cgi?id=1946602)), so the item lives in the tab menu.
+
 ## Development
 
 Load it temporarily through `about:debugging#/runtime/this-firefox` → **Load Temporary Add-on…** → select `manifest.json`.

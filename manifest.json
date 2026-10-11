@@ -17,6 +17,7 @@
       }
     }
   },
+  "permissions": ["menus"],
   "background": {
     "scripts": ["background.js"]
   },
